@@ -1,0 +1,276 @@
+:root {
+  --font-family: Heebo,Roboto,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#logo {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-height: 40px;
+}
+
+#title {
+  margin-left: 20px;
+}
+
+header {
+    width: 100%;
+    height: 72px;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: center;
+    color: #f9ae62;
+    font-weight: bold;
+    z-index: 999;
+}
+
+main {
+  display: flex;
+  flex: 1 1 auto;
+    overflow: hidden;
+    padding-bottom: 1px;
+    vertical-align: baseline;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+.returnButton {
+  visibility: hidden;
+  max-width: 0px;
+  max-height: 0px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  height: 95%;
+  width: 95%;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.userBar {
+  background-color: var(--contact-list-bg-color);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 1;
+  position: relative;
+  min-width: 100px;
+  transition: width .2s ease;
+  border-right: 1px solid gray;
+  padding-right: 30px;
+}
+
+.searchBarContainer {
+  height: 40px;
+  margin-top: 10px;
+}
+
+.searchBar {
+  height: 30px;
+  width: 70%;
+  border-color: #242424;
+  border-width: 2px;
+  border-radius: 20px;
+  background-color: #e1e1e1;
+}
+
+.userBarList {
+  height: 100%;
+  position: relative;
+  margin-inline-start: 0px;
+  overflow: scroll;
+  scroll-behavior: auto;
+}
+
+.userBrief-container {
+  height: 80px;
+  padding-top: 0px;
+}
+
+.userBrief{
+    display: flex;
+}
+
+.userBrief button {
+  margin: 4px 0;
+  align-items: center;
+    background-color: var(--contact-list-bg-color);
+    border-radius: 7px;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 6px;
+    position: relative;
+    height: 68px;
+}
+
+.photo {
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+  align-items: center;
+  background-color:#a5a5a5;
+}
+
+.briefPhoto {
+  display:inline-block;
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+  background-color:#a5a5a5;
+}
+
+.photo p {
+  color: white;
+  min-width: 50px;
+  font-weight: 700;
+}
+
+.briefPhoto p{
+  color: white;
+  min-width: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.briefnameContainer {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.briefName {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.briefPhone {
+  color:#777777;
+}
+
+.userDetailContainer {
+  flex-direction: column;
+  text-align: center;
+  flex-basis: 50vw;
+  flex-grow: 2;
+  justify-content: center;
+  font-family: Heebo,Roboto,sans-serif;
+}
+
+.userDetailContainer-mobile {
+  padding-left: 2%;
+  display: none;
+  position: fixed;
+  top:80px;
+  left: 0px;
+  bottom: 0px;
+  right:0px;
+  padding-top: 20px;
+  flex-direction: column;
+  text-align: center;
+  flex-basis: 50vw;
+  flex-grow: 2;
+  justify-content: center;
+  font-family: Heebo,Roboto,sans-serif;
+  overflow: scroll;
+}
+
+.baseInfo {
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  display:inline-block;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.baseInfoMobile {
+    position: absolute;
+    display: none;
+}
+
+.detail {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex: 0 0 auto;
+  }
+
+  .returnButton {
+    visibility: visible;
+    min-width: 50px;
+    min-height: 30px;
+    background-color: rgb(159, 159, 159);
+  }
+
+  .userDetailContainer{
+    max-width: 0px;
+    overflow: hidden;
+  }
+
+  .userBar {
+    flex-grow: 2;
+    display: no;
+  }
+
+  .returnButtonContainer {
+    text-align: left;
+    padding-left: 5vw;
+  }
+
+  .userDetailContainer-mobile {
+    display: block;
+    background-color: white;
+  }
+  
+}
